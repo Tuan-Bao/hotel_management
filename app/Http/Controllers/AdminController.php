@@ -14,7 +14,7 @@ class AdminController extends Controller
             $usertype = Auth::user()->user_type;
 
             if ($usertype == 'user') {
-                return view('dashboard');
+                return view('home.index');
             } else if ($usertype == 'admin') {
                 return view('admin.index');
             } else {

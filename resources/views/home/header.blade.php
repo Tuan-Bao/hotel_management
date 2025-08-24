@@ -6,7 +6,7 @@
                 <div class="full">
                     <div class="center-desk">
                         <div class="logo">
-                            <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                            <a href=""><img src="images/logo.png" alt="#" /></a>
                         </div>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
                     <div class="collapse navbar-collapse" id="navbarsExample04">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home</a>
+                                <a class="nav-link" href="">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="about.html">About</a>
@@ -36,6 +36,23 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact Us</a>
                             </li>
+                            @if (Route::has('login'))
+                            @auth
+                            <x-app-layout>
+
+                            </x-app-layout>
+                            @else
+                            <li class="nav-item" style="padding-right: 10px;">
+                                <a class="btn btn-success" href="{{url('/login')}}">Login</a>
+                            </li>
+                            @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="btn btn-primary" href="{{url('/register')}}">Register</a>
+                            </li>
+                            @endif
+                            @endauth
+                            @endif
+
                         </ul>
                     </div>
                 </nav>
