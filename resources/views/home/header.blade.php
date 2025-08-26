@@ -6,7 +6,7 @@
                 <div class="full">
                     <div class="center-desk">
                         <div class="logo">
-                            <a href=""><img src="images/logo.png" alt="#" /></a>
+                            <a href=""><img src="user/images/logo.png" alt="#" /></a>
                         </div>
                     </div>
                 </div>
